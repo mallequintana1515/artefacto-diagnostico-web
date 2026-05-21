@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Validador de Producción Rural</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header class="hero">
+<div class="hero-content">
+<span class="eyebrow">Herramienta de diagnóstico</span>
+<h1>Validación ágil de registros rurales</h1>
+<p class="hero-text">Capture la información de producción y obtenga una evaluación inmediata de la calidad del registro.</p>
+</div>
+</header>
+<main class="container">
+<section class="layout-grid">
+<article class="card form-card">
+<h2>Formulario de registro</h2>
+<p class="card-description">Ingrese los datos del producto y valide en tiempo real con controles de consistencia.</p>
+<form id="formulario" novalidate>
+<label for="producto">Producto</label>
+<input type="text" id="producto" name="producto" placeholder="Ej. maíz, café, leche">
+<label for="cantidad">Cantidad</label>
+<input type="number" id="cantidad" name="cantidad" placeholder="Ej. 1200" min="0" step="any">
+<label for="unidad">Unidad de medida</label>
+<input type="text" id="unidad" name="unidad" placeholder="Ej. kg, litros">
+<label for="fecha">Fecha de registro</label>
+<input type="date" id="fecha" name="fecha">
+<label for="responsable">Responsable</label>
+<input type="text" id="responsable" name="responsable" placeholder="Nombre del responsable">
+<button type="submit">Validar registro</button>
+</form>
+<div id="resultado" class="resultado" aria-live="polite"></div>
+</article>
+<aside class="card info-card">
+<h2>¿Qué valida esta herramienta?</h2>
+<ul class="benefits">
+<li><strong>Campos obligatorios:</strong> todos deben estar completos.</li>
+<li><strong>Cantidad válida:</strong> número positivo mayor que cero.</li>
+<li><strong>Consistencia de datos:</strong> avisos para cantidades fuera de lo esperado.</li>
+<li><strong>Responsabilidad documentada:</strong> registro con responsable y fecha.</li>
+</ul>
+</aside>
+</section>
+</main>
+<footer class="footer">
+<p>Validador de Producción Rural · Interfaz enfocada en claridad, control y usabilidad.</p>
+</footer>
+<script src="js/app.js"></script>
+</body>
+</html>
